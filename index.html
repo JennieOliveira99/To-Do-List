@@ -10,21 +10,22 @@
 </head>
 <body>
 
-<div id="todo-container">
+<div class="todo-container">
     <header>
          <h1>Lista de Tarefas </h1>
     </header>
-    <form id="todo-fora">
+    <form id="todo-form">
         <p class="texto">Adcione a tarefa.</p>
-
     <div class="form-control">
-       <input type="text" id="input-inteiro" placeholder="O que Você quer estudar?">
+
+       <input type="text" id="todo-input" placeholder="O que Você quer estudar?">
        <button type="submit">
         <i class="fa-thin fa-plus"></i>
        </button>
     </div>
 </form>
-<form id="edit-form">
+
+<form id="edit-form" class="hide">
     <p>Edite sua Tarefa</p>
     <div class="form-control">
         <input type="text" id="edit-input">
@@ -34,6 +35,7 @@
     </div>
     <button id="cancel-edit-btn">Cancelar</button>
 </form>
+
 <div id="toolbar">
     <div id="search">
         <h4>Pesquisar</h4>
@@ -44,6 +46,7 @@
             </button>
         </form>
     </div>
+
     <div id="filter">
         <h4>Filtrar:</h4>
         <select id="filter-select">
@@ -52,8 +55,8 @@
           <option value="ToDo">A Fazer</option>  
         </select>
     </div>
- 
 </div>
+
 <div id="todo-list">
 <div class="todo">
     <h3>Estou fazendo algo</h3>
@@ -69,8 +72,8 @@
         <i class="fa-solid fa-xmark"></i> 
         
        </button>
-</div>
-</div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
