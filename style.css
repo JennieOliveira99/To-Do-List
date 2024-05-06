@@ -1,55 +1,12 @@
-
-/*CSS GERAL*/
-*{
- padding: 0;
- margin: 0;
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- color: #333;
- box-sizing: border-box;   
-}
-body{
-    background-image: url();
-    background-position: center;
-    background-size: cover;
-}
-/*ESTILIZANDO TODOS OS BOTOES*/
-button{
-background-color: #f198af;
-color: #691248;
-padding: .3em .6em;
-font-size: 1rem;
-cursor: pointer;
-display: flex;
-justify-content: center;
-align-items: center;
-transition: 0.4s;
-}
-button:hover{
-    background-color: #691248;
-    color: #fff;
-}
-button:hover >i{
-    color: #fff;
-}
-button i{
-    color:#333;
-    /* desabilitando eventos de click dos icones para fazer com que quando o usario
-    clique no icone, seja como se estivesse clicando no botao */
-    pointer-events: none;
-}
-input, select{
-    padding: 0.25rem 0.5rem;
-}
-.hide{
-    display: none;
+/* Estilo do Formulário */
+body {
+    background-color: #f0f0f0;
 }
 
-/*Header do To Do*/
-
-.todo-container{
-    max-width: 450px;
+.todo-container {
+    max-width: 400px;
     margin: 3rem auto;
-    background-color: #fbd1d3;
+    background-color: #f8f8f8;
     padding: 2rem;
     border-radius: 20px;
 }
@@ -57,104 +14,72 @@ input, select{
 .todo-container header {
     text-align: center;
     padding: 0 1rem 1rem;
-    border-bottom: 1.5px solid #766dc1;
+    border-bottom: 2px solid #691248;
+    font-family: 'Times New Roman', Times, serif;
+    color: #691248;
 }
 
-/* TODO FORM*/
-#todo-form, 
-#edit-form{
-/* espacando dos cantos e dividindo dos demais elementos*/
-padding: 1rem;
-border-bottom: 1px solid #766dc1;
+.form-control {
+    margin-bottom: 1rem;
 }
 
- 
-#todo-form p, 
-#edit-form p{
-margin-bottom: .5rem;
-font-weight: bold;
+.form-control label {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #691248;
 }
 
-.form-control{
-    display: flex;
-}
-
-.form-control input{
-    margin-right: 0.4rem;
-}
-#cancel-edit-btn{
+.form-control input[type="text"],
+.form-control input[type="email"],
+.form-control select {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
     margin-top: 1rem;
 }
 
-#toolbar{
-    padding: 1rem;
-    border-bottom: 1px solid #766dc1;
+/* Estilizando as categorias */
+.category-options {
     display: flex;
 }
 
-#toolbar h4{
-    margin-bottom: .5rem;
-}
-
-#search{
-    border-right: 1px solid #766dc1;
-    padding-right: 1rem;
+.category-options label {
     margin-right: 1rem;
-    width: 65%;
-    display: flex;
-    /*consertando o pesquisar em cima do search*/
-    flex-direction: column;
-}
-#search form{
-    display: flex;
+    color: #691248;
 }
 
-#search input{
-    width: 100%;
-    margin-right: 0.4rem;
-
+.form-control input[type="radio"] {
+    display: inline-block;
+    margin-right: 0.5rem;
 }
 
-#filter{
-    width: 35%;
-    display: flex;
-    flex-direction: column;
+button[type="submit"] {
+    background-color: #691248;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/*fazendo a caixa de busuca ocupar todo espaço disponivel*/
-#filter select{
-    flex: 1;
+button[type="submit"]:hover {
+    background-color: #ff009d;
 }
 
-/*TODO LIST lado a lado*/
-.todo {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+
+/*estilo da mensagem php*/
+.message-container {
+    background-color: #691248;
+    color: #fff;
     padding: 1rem;
-    border-bottom: 1px solid #766dc1;
-    transition: .3s;   
+    border-radius: 5px;
+    margin-top: 1rem;
+    text-align: center; 
 }
 
-/*delimitando que os blotoes ficarao à esquerda*/
-.todo h3{
-    flex: 1;
-    font-size: 0.9rem;
-}
-
-.todo button{
-    margin-left: 0.3rem;
-}
-
-
-/* EStilizando a FUNÇÃO done tarefas ja feitas*/
-
-.done{
-    background-color:#691248 ;
-}
-
-.done h3{
-    color: #ebe6e6;
-    text-decoration: line-through;
-    font-style: italic;
+.success-message {
+    font-size: 1.1rem;
+    font-weight: bold;
 }
